@@ -1,0 +1,8 @@
+forms:
+  health_form:
+    sleep:
+      - type: from_text
+    stress:
+      - type: from_text
+    exercise:
+      - type: from_text

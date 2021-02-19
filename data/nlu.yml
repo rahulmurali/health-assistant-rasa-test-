@@ -1,0 +1,66 @@
+version: "2.0"
+nlu:
+- intent: greet
+  examples: |
+    - Hi
+    - Hey!
+    - Hello
+    - Good day
+    - Good morning
+    - hey
+    - hola
+- intent: affirm
+  examples: |
+    - yes
+    - yea
+    - yeah
+    - ok
+    - cool
+    - sure
+    - ok great
+    - great
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - no way
+    - no thanks
+- intent: out_of_scope
+  examples: |
+    - wait
+    - you are no help
+    - tell me the weather
+    - what's the weather
+    - that's not what I want to do
+- intent: inform
+  examples: |
+    - a full sleep of [8 hours](sleep)
+    - [8 hours](sleep)
+    - only [four hours](sleep)
+    - about [6 hours](sleep)
+    - [low](stress)
+    - [medium](stress)
+    - [high](stress)
+    - [rock climbing](exercise)
+    - went for [swimming](exercise)
+- intent: thank_you
+  examples: |
+    - thank you
+    - thanks
+    - um thank you good bye
+    - okay cool uh good bye thank you
+    - okay thank you good bye
+    - you rock
+    - and thats all thank you and good bye
+- intent: ask_exercise
+  examples: |
+    - any exercise tips
+    - tips for exercise
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good bye
+    - cee you later
+    - good night

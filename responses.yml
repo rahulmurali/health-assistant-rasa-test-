@@ -1,0 +1,30 @@
+responses:
+  utter_greet:
+    - text: |
+        Hey! Time to check your health. Are you ready to answer some questions?
+    - text: |
+        Hi! ready for health check ups?
+  utter_ask_sleep:
+    - text: |
+        how much time did you sleep?
+  utter_ask_exercise:
+    - text: |
+        What type of exercise did you do?
+  utter_ask_diet:
+    - text: |
+        Did you stick to a healthy diet?
+  utter_ask_goal:
+    - text: |
+        What you want to accomplish today?
+  utter_ask_stress:
+    - text: |
+        What is your stress level right now 🧘 ?
+  utter_slot_values:
+    - text: |
+        here's your daily health log: \n
+        - Type of exercise: {exercise}\n
+        - sleep: {sleep}\n
+        - stress: {stress}
+  utter_goodbye:
+    - text: |
+        Good bye, stay healthy

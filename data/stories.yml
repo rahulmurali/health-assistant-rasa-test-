@@ -1,0 +1,15 @@
+stories:
+  - story: greet and ask
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: affirm
+      - action: health_form
+      - active_loop: health_form
+
+- story: user deny question
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: deny
+  - action: utter_goodbye

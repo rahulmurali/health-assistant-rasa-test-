@@ -1,0 +1,70 @@
+version: "2.0"
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+  - greet
+  - deny
+  - inform
+  - affirm
+  - out_of_scope
+  - ask_exercise
+  - thank_you
+  - goodbye
+entities:
+  - exercise
+  - sleep
+  - stress
+slots:
+  sleep:
+    type: unfeaturized
+    influence_conversation: false
+  stress:
+    type: unfeaturized
+    influence_conversation: false
+  exercise:
+    type: unfeaturized
+    influence_conversation: false
+responses:
+  utter_greet:
+    - text: |
+        Hey! Time to check your health. Are you ready to answer some questions?
+    - text: |
+        Hi! ready for health check ups?
+  utter_ask_sleep:
+    - text: |
+        how much time did you sleep?
+  utter_ask_exercise:
+    - text: |
+        What type of exercise did you do?
+  utter_ask_diet:
+    - text: |
+        Did you stick to a healthy diet?
+  utter_ask_goal:
+    - text: |
+        What you want to accomplish today?
+  utter_ask_stress:
+    - text: |
+        What is your stress level right now ?
+  utter_slot_values:
+    - text: |
+        here's your daily health log: 
+        - Type of exercise: {exercise}
+        - sleep: {sleep}
+        - stress: {stress}
+  utter_goodbye:
+    - text: |
+        Good bye, stay healthy
+actions:
+  - "..."
+  - utter_goodbye
+  - utter_greet
+  - utter_slot_values
+forms:
+  health_form:
+    sleep:
+      - type: from_text
+    stress:
+      - type: from_text
+    exercise:
+      - type: from_text

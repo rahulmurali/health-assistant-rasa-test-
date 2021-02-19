@@ -1,0 +1,16 @@
+rules:
+  - rule: activate health form
+    steps:
+      - intent: affirm
+      - action: health_form
+      - active_loop: health_form
+
+  - rule: submit form
+    condition:
+      - active_loop: health_form
+    steps:
+      - action: health_form
+      - active_loop: null
+      - action: utter_slot_values
+      - intent: thank_you
+      - action: utter_goodbye

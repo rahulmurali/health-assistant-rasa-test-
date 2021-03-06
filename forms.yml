@@ -1,8 +1,27 @@
 forms:
   health_form:
-    sleep:
-      - type: from_text
-    stress:
-      - type: from_text
+    confirm_exercise:
+      - type: from_intent
+        intent: affirm
+        value: yes
+      - type: from_intent
+        intent: deny
+        value: no
     exercise:
+      - type: from_entity
+        entity: exercise
+    sleep:
+      - type: from_entity
+        entity: sleep
+    stress:
+      - type: from_entity
+        entity: stress
+    diet:
+      - type: from_intent
+        intent: affirm
+        value: yes
+      - type: from_intent
+        intent: deny
+        value: no
+    goal:
       - type: from_text
